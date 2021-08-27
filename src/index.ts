@@ -15,7 +15,7 @@ Commands.loadCommands(__dirname + '/commands/');
 // Events
 client.on('ready', () => {
     console.log(`Logged in as ${client.user?.tag}`);
-    client.user?.setActivity({"type": 'PLAYING', "name": 'M.help'})
+    client.user?.setActivity({"type": 'LISTENING', "name": 'M.help'})
 })
 
 client.on('messageCreate', async (message) => {

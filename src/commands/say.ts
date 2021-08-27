@@ -8,20 +8,26 @@ const ping: commandInterface = {
 
     run: {
         async message({client, message, args}: messageEvent){
-            //
             const input = args.join(' ');
             if(!input) return message.reply("Hey forgot something?\nM.say <message>");
             try {
                 await execFileSync('./bin/say_demo_us', ['-a', `[:PHONE ON] ${input}`, '-fo']);
                 const file = new MessageAttachment('./dtmemory.wav');
-                return message.reply({content: "Here you go: " + input, files: [file]})
+                return await message.reply({content: "Here you go: " + input, files: [file]});
             } catch (error) {
-                message.reply("something when wrong :(\n\nTry something different!")
+                return message.reply("Something when wrong :(\n\nTry something different!")
             }
         },
         async interaction({client, interaction}: interactionEvent){
-
-            //
+            const input = interaction.options.getString('message');
+            if(!input) return interaction.reply("Hey forgot something?\nM.say <message>");
+            try {
+                await execFileSync('./bin/say_demo_us', ['-a', `[:PHONE ON] ${input}`, '-fo']);
+                const file = new MessageAttachment('./dtmemory.wav');
+                return await interaction.reply({content: "Here you go: " + input, files: [file]});
+            } catch (error) {
+                return interaction.reply("Something when wrong :(\n\nTry something different!")
+            }
         }
     }
 };
