@@ -9,6 +9,9 @@
   },
   "author": "Babakinha",
   "license": "UNLICENSED",
+  "engines": {
+    "node": "16.x"
+  },
   "dependencies": {
     "discord.js": "^13.1.0",
     "typescript": "^4.4.2"
