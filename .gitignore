@@ -1,0 +1,11 @@
+# Editor
+.vscode
+
+# Dependencies
+node_modules
+
+# API keys and secrets
+.env
+
+# Ignore build
+out/**/*

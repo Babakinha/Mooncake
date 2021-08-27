@@ -1,0 +1,19 @@
+{
+  "name": "mooncake",
+  "version": "1.0.0",
+  "description": "",
+  "main": "out/index.js",
+  "scripts": {
+    "start": "tsc && node out/index.js",
+    "build": "tsc",
+    "run": "node out/index.js"
+  },
+  "author": "Babakinha",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "discord.js": "^13.1.0"
+  },
+  "devDependencies": {
+    "dotenv": "^10.0.0"
+  }
+}
