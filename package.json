@@ -4,9 +4,8 @@
   "description": "",
   "main": "out/index.js",
   "scripts": {
-    "start": "tsc && node out/index.js",
-    "build": "tsc",
-    "run": "node out/index.js"
+    "start": "node out/index.js",
+    "build": "tsc"
   },
   "author": "Babakinha",
   "license": "UNLICENSED",
