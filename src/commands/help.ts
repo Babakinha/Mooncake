@@ -4,7 +4,7 @@ import { messageEvent, interactionEvent, commandInterface } from "../util/interf
 const helpMessage = new MessageEmbed()
     .setColor("AQUA")
     .setTitle("Help Message")
-    .setDescription("We don't have a Help message yet :(\nTry again another day");
+        .setDescription("We don't have a Help message yet :(\nTry again another day\nThe only thing we can hint you is m.say and m.ping");
 
 //Command
 const help: commandInterface = {
