@@ -1,6 +1,6 @@
 import { messageEvent, interactionEvent, commandInterface } from "../util/interfaces";
-import { execFileSync } from 'child_process'
 import { MessageAttachment } from "discord.js";
+import { say } from "dectalk";
 
 //Command
 const ping: commandInterface = {
@@ -11,9 +11,9 @@ const ping: commandInterface = {
             const input = args.join(' ');
             if(!input) return message.reply("Hey forgot something?\nM.say <message>");
             try {
-                await execFileSync('./bin/say_demo_us', ['-a', `[:PHONE ON] ${input}`, '-fo']);
-                const file = new MessageAttachment('./dtmemory.wav');
-                return await message.reply({content: "Here you go: " + input, files: [file]});
+                let wavdata = await say(input, {EnableCommands: true});
+                const file = new MessageAttachment(wavdata);
+                return await message.reply({content: "Here you go!", files: [file]});
             } catch (error) {
                 return message.reply("Something when wrong :(\n\nTry something different!")
             }
@@ -22,9 +22,9 @@ const ping: commandInterface = {
             const input = interaction.options.getString('message');
             if(!input) return interaction.reply("Hey forgot something?\nM.say <message>");
             try {
-                await execFileSync('./bin/say_demo_us', ['-a', `[:PHONE ON] ${input}`, '-fo']);
-                const file = new MessageAttachment('./dtmemory.wav');
-                return await interaction.reply({content: "Here you go: " + input, files: [file]});
+                let wavdata = await say(input, {EnableCommands: true});
+                const file = new MessageAttachment(wavdata);
+                return await interaction.reply({content: "Here you go!", files: [file]});
             } catch (error) {
                 return interaction.reply("Something when wrong :(\n\nTry something different!")
             }
