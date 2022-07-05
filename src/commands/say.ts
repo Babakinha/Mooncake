@@ -12,7 +12,7 @@ const ping: commandInterface = {
             if(!input) return message.reply("Hey forgot something?\nM.say <message>");
             try {
                 let wavdata = await say(input, {EnableCommands: true});
-                const file = new MessageAttachment(wavdata);
+                const file = new MessageAttachment(wavdata, 'aieou.wav');
                 return await message.reply({content: "Here you go!", files: [file]});
             } catch (error) {
                 return message.reply("Something when wrong :(\n\nTry something different!")
@@ -23,7 +23,7 @@ const ping: commandInterface = {
             if(!input) return interaction.reply("Hey forgot something?\nM.say <message>");
             try {
                 let wavdata = await say(input, {EnableCommands: true});
-                const file = new MessageAttachment(wavdata);
+                const file = new MessageAttachment(wavdata, 'aieou.wav');
                 return await interaction.reply({content: "Here you go!", files: [file]});
             } catch (error) {
                 return interaction.reply("Something when wrong :(\n\nTry something different!")
