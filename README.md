@@ -1,8 +1,6 @@
-# Mooncake
+# Mooncake: The bot
+![Mooncake Bot](https://cdn.discordapp.com/avatars/880907805924687952/63c485ba8a0aff8188c27dadfced0d92.png?size=4096)
 Simple bot that can reply with "Moonbase alpha" (Dectalk) audios
 
 ## Notes
-I Guess i could implement it better  
-  
-But you know what they say  
-If it already works dont touch it!
+It only runs on linux (beacuse the only dectalk i could find was a linux binary)
