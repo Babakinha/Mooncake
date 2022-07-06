@@ -26,7 +26,7 @@ const ping: commandInterface = {
                 const file = new MessageAttachment(wavdata, 'aieou.wav');
                 return await interaction.reply({content: "Here you go!", files: [file]});
             } catch (error) {
-                return interaction.reply("Something when wrong :(\n\nTry something different!")
+                return;
             }
         }
     }
