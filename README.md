@@ -13,3 +13,4 @@ A Simple bot that can reply with "Moonbase alpha" (Dectalk) audios
 
 ## Notes (for devs)
 It only runs on linux (beacuse the only dectalk i could find was a linux binary)
+see [Dectalk](https://github.com/Babakinha/Dectalk#notes) for more info
